@@ -1,0 +1,41 @@
+@(F:testform)
+    <div class="jumbotron" style="background-image: url(assets/images/one.png); color: white;font-size: 50px">
+        เกี่ยวกับสินค้า
+    </div>
+
+    <div class="jumbotron" style="background-image: url(assets/images/total.png);">
+        <div class="jumbotron"style="color: #3c3c3c">
+            <table style="font-size: 20px" class="table" >
+            <tr>
+                <th>รหัสสินค้า</th>
+                <td>:: @F.getTid</td>
+            </tr>
+                <tr>
+                    <th>ชื่อสินค้า</th>
+                    <td>:: @F.getTname</td>
+                </tr>
+
+                <tr>
+                    <th>หมวดหมู่สินค้า</th>
+                    <td>:: @F.getTbrand</td>
+                </tr>
+
+                <tr>
+                    <th>จำนวน</th>
+                    <td>:: @F.getTdetail</td>
+                </tr>
+                <tr>
+                    <th>ราคา</th>
+                    <td>:: @F.getTprice</td>
+                </tr>
+                <tr>
+                <th>จำนวน</th>
+                <td>::  @F.getPamount@F.getTdetail</td>
+            </tr>
+                <tr>
+                    <th>รายละเอียด</th>
+                    <td>::  @F.getTdetail</td>
+                </tr>
+            </table>
+        </div>
+    </div>

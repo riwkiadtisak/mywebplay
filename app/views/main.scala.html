@@ -1,0 +1,76 @@
+@(content: Html)
+<html>
+    <head>
+        <title>YEAH! Model</title>
+        <link type="text/css" rel="stylesheet" href="assets/stylesheets/bootstrap337/css/bootstrap.css">
+        <style>
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            border: none;
+            background-color: red;
+            color: white;
+            padding: 15px;
+            border-radius: 100px;
+        }
+        </style>
+
+    </head>
+
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                        @header()
+                </div>
+            </div>
+
+            <div class="row" >
+                <div class="col-md-3">
+                    @menu()
+
+                </div>
+                <div class="col-md-9">
+                    @content
+                </div>
+            </div>
+
+            <footer class="row">
+                <div class="clo-md-12">
+
+                    <img src="assets/images/foot.png">
+                    <!--
+                    <div class="jumbotron text-center">
+
+                    </div>-->
+                </div>
+            </footer>
+        </div>
+
+            <!--buttontop-->
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+        <script>
+
+                // When the user scrolls down 20px from the top of the document, show the button
+                window.onscroll = function() {scrollFunction()};
+
+                function scrollFunction() {
+                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                        document.getElementById("myBtn").style.display = "block";
+                    } else {
+                        document.getElementById("myBtn").style.display = "none";
+                    }
+                }
+
+                // When the user clicks on the button, scroll to the top of the document
+                function topFunction() {
+                    document.body.scrollTop = 0;
+                    document.documentElement.scrollTop = 0;
+                }
+        </script>
+            <!--stop buttontop-->
+    </body>
+</html>
