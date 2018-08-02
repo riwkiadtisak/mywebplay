@@ -1,0 +1,22 @@
+@(myProduct : Form[testform])
+@import helper._;
+<body>
+<h1>รับข้อมูลสินค้าแบบ helper</h1>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            @helper.form(action = routes.Application.book_post_helper(),'class -> "form-contorl"){
+                @inputText(myProduct("tid"),'_label ->"รหัสสินค้าา",'size -> "50", 'maxlength ->"10", 'requitred -> "requitred")
+                @inputText(myProduct("tname"),'_label ->"ชื่อสินค้า",'size -> "50", 'maxlength ->"200", 'requitred -> "requitred")
+                @select(myProduct("tbrand"), options = Seq("MARVEL" -> "MARVEL","ONE PIECE" -> "ONE PIECE","DRAGONBALL" -> "DRAGONBALL","BLEACH" -> "BLEACH","FAIRYTAIL" -> "FAIRYTAIL"),
+                    '_label ->"ประเภทการ์ตูน")
+                @inputText(myProduct("tprice"),'_label ->"ราคา",'size -> "50", 'maxlength ->"20", 'requitred -> "requitred")
+                @inputText(myProduct("tamount"),'_label ->"จำนวน",'size -> "50", 'maxlength ->"40", 'requitred -> "requitred")
+                @textarea(myProduct("tdetail"),'_label ->"รายละเอียด",'cols -> "52", 'rows ->"5", 'requitred -> "requitred")
+                <input type="submit" value="บันทึก" class="btn btn-success">
+                <input type="reset" value="เคลียร์" class="btn btn-danger">
+            }
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</body>

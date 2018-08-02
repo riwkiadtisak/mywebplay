@@ -1,0 +1,37 @@
+@(n:testform)
+<div class="jumbotron" style="background-image: url(assets/images/one.png); color: white;font-size: 50px">
+
+    <h1>รับข้อมูลสินค้าแบบ helper</h1>
+</div>
+
+<div class="jumbotron" style="background-image: url(assets/images/total.png);">
+    <div class="jumbotron"style="color: #3c3c3c">
+        <table style="font-size: 20px" class="table" >
+            <tr>
+                <th>รหัสสินค้า</th>
+                <td>:: @n.getTid</td>
+            </tr>
+            <tr>
+                <th>ชื่อสินค้า</th>
+                <td>:: @n.getTname</td>
+            </tr>
+
+            <tr>
+                <th>หมวดหมู่สินค้า</th>
+                <td>:: @n.getTbrand</td>
+            </tr>
+            <tr>
+                <th>ราคา</th>
+                <td>:: @n.getTprice</td>
+            </tr>
+            <tr>
+                <th>จำนวน</th>
+                <td>::  @n.getTamount</td>
+            </tr>
+            <tr>
+                <th>รายละเอียด</th>
+                <td>::  @n.getTdetail</td>
+            </tr>
+        </table>
+    </div>
+</div>

@@ -12,5 +12,10 @@ GET     /ble                        controllers.Application.Bleach()
 GET     /promo                      controllers.Application.promotion()
 GET     /testform                   controllers.Application.testform()
 POST    /input                      controllers.Application.showform()
+GET     /Admins                     controllers.Application.Adm()
+GET     /max                        controllers.Application.max()
+GET     /formin                     controllers.Application.book_form_helper()
+POST    /postform                   controllers.Application.book_post_helper()
+
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

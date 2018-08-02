@@ -7,14 +7,29 @@ import play.api.data.Form;
 import play.api.templates.Html;
 import play.data.DynamicForm;
 import play.mvc.*;
-
 import views.html.*;
 
 import javax.swing.text.html.HTML;
 import java.text.Normalizer;
 
 public class Application extends Controller {
-
+    //formnew
+    public  static testform book;
+    public static play.data.Form<testform> bookForm= play.data.Form.form(testform.class);
+    public  static Result book_form_helper(){
+        bookForm= play.data.Form.form(testform.class);
+        return main(newform.render(bookForm));
+    }
+    public static Result book_post_helper(){
+        play.data.Form<testform> newforms = bookForm.bindFromRequest();
+        if (newforms.hasErrors()){
+            return main(newform.render(newforms));
+        }else {
+            book = newforms.get();
+            return main(newshowfrom.render(book));
+        }
+    }
+    //stop
     public static Result main(Html content){
         return ok(main.render(content));
     }
@@ -96,6 +111,8 @@ public class Application extends Controller {
         return main(promotion.render());
     }
 
+    public static Result Adm() {return main(Admins.render());}
+
     public static Result testform() {
         return main(views.html.testform.render());
     }
@@ -114,5 +131,5 @@ public class Application extends Controller {
         testform output=new testform(Tid,Tname,Tbrand,Tdetail,Tprice,Tamount);
         return main(showform.render(output));
     }
-
+    public static Result max() {return ok(sarawut.render());}
 }

@@ -6,7 +6,7 @@ package models;
 public class testform {
     private String Tid,Tname,Tbrand,Tdetail;
     private Double Tprice;
-    private int tamount;
+    private int Tamount;
 
     public testform() {
     }
@@ -17,7 +17,7 @@ public class testform {
         Tbrand = tbrand;
         Tdetail = tdetail;
         Tprice = tprice;
-        tamount = tamount;
+        Tamount = tamount;
     }
 
     public String getTid() {
@@ -60,12 +60,10 @@ public class testform {
         Tprice = tprice;
     }
 
-    public int getPamount() {
-        return tamount;
+    public int getTamount() {
+        return Tamount;
     }
-
-    public void setPamount(int pamount) {
-        tamount = pamount;
+    public void setTamount(int tamount) {
+        Tamount = tamount;
     }
 }
-
